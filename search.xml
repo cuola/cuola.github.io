@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>conda及diffpure环境配置</title>
+      <link href="/2022/10/10/conda%E5%8F%8Adiffpure%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <url>/2022/10/10/conda%E5%8F%8Adiffpure%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Conda使用">Conda使用</h2><p>可以使用pip -V查看当前pip安装是否在conda指定的当前镜像中。</p><p>pip是Python包的通用管理器，conda是一个与语言无关的跨平台环境管理器</p><p>创建虚拟环境，激活虚拟环境，退出虚拟环境，删除虚拟环境</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda create -n env_name python=3.8</span><br><span class="line">conda activate env_name</span><br><span class="line">conda deactivate</span><br><span class="line">conda remove -n env_name --all</span><br></pre></td></tr></table></figure><p>查看环境中安装的软件包</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure><p>查看当前存在的虚拟环境</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br><span class="line">conda info -e</span><br></pre></td></tr></table></figure><p>使用conda安装（有些包conda里面没有），卸载</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy</span><br><span class="line">conda uninstall numpy</span><br></pre></td></tr></table></figure><p>服务器不能访问外网的情况下，使用pip install git+安装软件包会有问题。</p><p>这个时候需要手动安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/RobustBench/robustbench.git</span><br><span class="line">python setup.py build</span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure><p>DiffPure的配置需要手动安装autoattack，再手动安装robustbench</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> conda </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>docker.md</title>
       <link href="/2022/10/06/docker-md/"/>
       <url>/2022/10/06/docker-md/</url>
